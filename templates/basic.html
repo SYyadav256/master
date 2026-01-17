@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<style>
+        table {
+            width: 60%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid rgb(222, 212, 212);
+            padding: 10px;
+            text-align: center;
+            background-color: azure;
+        }
+        th {
+            background-color: rgba(238, 240, 240, 0.396);
+        }
+         body {
+            background-color: #21b6be;
+        }
+    </style>
+<body>
+    <table>
+         <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Duration</th>
+        <th>Fees</th>
+        <th>Topics</th>
+    </tr>
+    <tr>
+        <td>{{ name }}</td>
+        <td>{{ course }}</td>
+        <td>{{ duration }}</td>
+        <td>{{ fees }}</td>
+        <td>{{ topics|join:", " }}</td>
+    </tr>
+    </table>
+</body>
+</html>

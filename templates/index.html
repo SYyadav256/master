@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 30px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            color: #ff9800;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Banner */
+        .banner {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #2196f3;
+            color: white;
+        }
+
+        .banner h2 {
+            font-size: 32px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* =====================
+           Responsive Section
+           ===================== */
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .nav-links li {
+                margin: 10px;
+            }
+
+            .banner h2 {
+                font-size: 26px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .header {
+                padding: 40px 15px;
+            }
+
+            .banner {
+                padding: 50px 15px;
+            }
+
+            .banner h2 {
+                font-size: 22px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">PAPA Website</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Welcome to My Website</h1>
+        <p>Fully responsive layout using internal CSS</p>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h2>Responsive Banner</h2>
+        <p>Looks great on all screen sizes</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 MyWebsite | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
