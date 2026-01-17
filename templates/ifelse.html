@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    {% for n in number %}
+    <diV>{{ n }}</diV>
+    {% endfor %}
+    <br>
+    <hr>
+    {% for n in number %}
+        {% if n > 20 %}
+            <div>{{ n }}</div>
+        {% endif %}
+    {% endfor %}
+{% if numbers|length > 0 %}
+{% for n in numbsers %}
+{% if n > 20 %}
+<div>{{ n }}</div>
+{% endif %}
+{%endfor%}
+{% else %}
+<h1>NO DATA FOUND
+{%endif%}
+</body>
+</html>

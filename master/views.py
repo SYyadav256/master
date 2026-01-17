@@ -35,3 +35,18 @@ def forloop(request):
     ]
     }
     return render (request,"forloop.html",data1)
+
+def ifelse(request):
+    data3 = {"title":"ifelse","number":[11,22,33,44,55,66,],
+    "college_details":[{
+        "name":"Medicaps University",
+        "ROllNO":"2022",
+        "Contact_NO":97658939320,
+        },
+        {   "name":"IPS",
+            "ROllNO":"2020",
+            "Contact_NO":1111111111111111,
+        },
+    ]
+    }
+    return render (request,"ifelse.html",data3)
