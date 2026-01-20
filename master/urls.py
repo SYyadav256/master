@@ -27,5 +27,9 @@ urlpatterns = [
     path('',views.homepage),
     path('basic/',views.basic),
     path('forloop/',views.forloop),
-    path('ifelse/',views.ifelse)
+    path('ifelse/',views.ifelse),
+    path('home/',views.home),
+    path('about/',views.about),
+    path('services/',views.services),
+    path('contact/',views.contact),
 ]
