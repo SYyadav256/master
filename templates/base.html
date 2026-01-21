@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Template with Cards</title>
+      <link rel="stylesheet" href="{% static 'CSS/base.css' %}">
+
+</head>
+<body>
+{% include "header.html" %}
+    <!-- Section 1 -->
+    <section class="section">
+        <h2>Our Services</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Card 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="card">
+                <h3>Card 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="card">
+                <h3>Card 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Section 2 -->
+    <section class="section section-alt">
+        <h2>Our Features</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Card A</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="card">
+                <h3>Card B</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="card">
+                <h3>Card C</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+    </section>
+{% include "footer.html" %}
+{% block start %}
+
+{%endblock%}
+</body>
+</html>
