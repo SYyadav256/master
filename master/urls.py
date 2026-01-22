@@ -36,4 +36,5 @@ urlpatterns = [
     path("header",views.header),
     path("footer",views.footer),
     path("base",views.base),
+    path("navbar",views.navbar),
 ]

@@ -74,3 +74,6 @@ def footer(request):
 
 def base(request):
     return render(request,"base.html")
+
+def navbar(request):
+    return render(request,"navbar.html")

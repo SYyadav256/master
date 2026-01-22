@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #1e293b;
+            padding: 15px 8%;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar li {
+            margin: 0 10px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover,
+        .navbar .active a {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            .navbar li {
+                margin: 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index1">Index</a></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <br>
+    <h1 >Active</h1>
+<nav class="navbar">
+        <ul>
+            <li class="{% if request.path == '/home' %} active{% endif %}"><a href="/index1">Index</a></li>
+            <li><a href="/index1">Index</a></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
