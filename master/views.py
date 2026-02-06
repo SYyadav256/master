@@ -1,5 +1,5 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.http import HttpResponse,HttpResponseRedirect
+from django.shortcuts import render,redirect
 
 def home(request):
     return HttpResponse("Shriyash")
@@ -77,3 +77,89 @@ def base(request):
 
 def navbar(request):
     return render(request,"navbar.html")
+
+def l17(request):
+    data1 = {
+        'topic':"For Loop",
+        'title':"For loop",
+        'bdata':"Nischay is chomu",
+        'clist':['php','java','python'],
+        'student':[{
+            'name':'shivam',
+            'phone':7898136977,
+        },
+        {
+            'name':'shobhit',
+            'phone':4549161541,
+        
+        }]
+    }
+    return render(request,"l17.html",data1)
+
+def l18(request):
+    data2 = {
+        'topic':"IF Else",
+        'title':"If else",
+        'number':[10,20,30,40],
+
+        'student':[{
+            'name':'shivam',
+            'phone':7898136977,
+        },
+        {
+            'name':'shobhit',
+            'phone':4549161541,
+        
+        }]
+    }
+    return render(request,"l18.html",data2)
+
+def l19(request):
+    data3 = {
+        'topic':"Static files Management",
+        'title':"Static files management",
+        'css':'Static files from CSS',
+        'image':'Files from image',
+    }
+    return render(request,"l19.html",data3)
+
+def l20(request):
+    return render(request,"l20.html")
+
+def l22(request):
+    finalans=0
+    try:
+        n1 = int(request.GET['num1'])
+        n2 = int(request.GET['num2'])
+        finalans=n1+n2
+    except:
+        pass
+    return render(request,"l22.html",{'output':finalans})
+
+def l23(request):
+    finalans=0
+    try:
+        if request.method=="POST":
+         n1 = int(request.POST.get('num1'))
+         n2 = int(request.POST.get('num2'))
+         finalans=n1+n2
+    except:
+        pass
+    return render(request,"l23.html",{'output':finalans})
+
+def l24(request):
+    finalans=0
+    try:
+        if request.method=="POST":
+         n1 = int(request.POST.get('num1'))
+         n2 = int(request.POST.get('num2'))
+         finalans=n1+n2
+         data={
+             'n1':n1,
+             'n2':n2,
+             'output':finalans
+         }
+    except:
+        pass
+    url = "/l19/  output={}".format(finalans)
+    return HttpResponseRedirect('/l18/')
